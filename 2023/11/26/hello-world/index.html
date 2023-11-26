@@ -283,30 +283,31 @@
                   
                 
                 
-  <div id="valine"></div>
+  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.lazyComments('valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
-        new Valine({
-          el: "#valine",
-          app_id: "swRNSO5X1YEQZto0DyG1chEs-MdYXbMMI",
-          app_key: "DgCVxdz1PhjxuWaVJWdXF7lN",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "https://swrnso5x.api.lncldglobal.com",
+    Fluid.utils.lazyComments('gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
+        var gitalk = new Gitalk({
+          clientID: 'fd7c18797f60ffc1db16',
+          clientSecret: '432eefc88fc1c86eb79f584be5543d2b62a2c462',
+          repo: 'AwesomeLive',
+          owner: '',
+          admin: ["AwesomeLive"],
+          id: 'eccdff9e575715e8e80875d26ec83d2d',
+          language: 'zh-CN',
+          labels: ["Gitalk"],
+          perPage: 10,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false,
+          proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token'
         });
+        gitalk.render('gitalk-container');
       });
     });
   </script>
-  <noscript>Please enable JavaScript to view the
-    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
-  </noscript>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
               </article>

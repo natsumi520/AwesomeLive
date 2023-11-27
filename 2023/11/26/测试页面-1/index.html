@@ -271,31 +271,14 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
-  <script type="text/javascript">
-    Fluid.utils.lazyComments('gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
-        var gitalk = new Gitalk({
-          clientID: 'fd7c18797f60ffc1db16',
-          clientSecret: '432eefc88fc1c86eb79f584be5543d2b62a2c462',
-          repo: 'AwesomeLive',
-          owner: '',
-          admin: ["AwesomeLive"],
-          id: 'b5dad467b406bd4d3718c508b8690c7a',
-          language: 'zh-CN',
-          labels: ["Gitalk"],
-          perPage: 10,
-          pagerDirection: 'last',
-          createIssueManually: true,
-          distractionFreeMode: false,
-          proxy: 'https://proxy-gitalk-api.netlify.app//https://github.com/login/oauth/access_token'
-        });
-        gitalk.render('gitalk-container');
+  <div id="lv-container" data-id="city" data-uid="MTAyMC81OTI0Mi8zNTcwNA==">
+    <script type="text/javascript">
+      Fluid.utils.lazyComments('lv-container', function() {
+        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
       });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
+    </script>
+    <noscript>为正常使用来必力评论功能请允许 JavaScript 运行</noscript>
+  </div>
 
 
               </article>
